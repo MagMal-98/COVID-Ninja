@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-@main
+ @main
 struct COVID_NinjaApp: App {
     var body: some Scene {
         WindowGroup {
