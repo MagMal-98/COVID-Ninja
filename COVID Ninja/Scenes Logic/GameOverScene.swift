@@ -11,6 +11,7 @@ import SpriteKit
 class GameOverScene: SKScene {
     
     var menuLabel = SKLabelNode()
+    var totalScoreLabel = SKLabelNode()
     
     let fadeOut = SKAction.fadeOut(withDuration: 0.4)
     let fadeIn = SKAction.fadeIn(withDuration: 0.4)
@@ -20,6 +21,9 @@ class GameOverScene: SKScene {
         view.scene?.scaleMode = .aspectFill
         
         menuLabel = childNode(withName: "menuLabel") as! SKLabelNode
+        
+        totalScoreLabel = childNode(withName: "totalScoreLabel") as! SKLabelNode
+        totalScoreLabel.text = "Total Score: \(GameScene.score)"
         
         let sequence = SKAction.sequence([fadeOut, fadeIn])
         menuLabel.run(SKAction.repeatForever(sequence))

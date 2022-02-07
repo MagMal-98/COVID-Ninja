@@ -13,7 +13,7 @@ class GameScene: SKScene{
     
     var scoreLabel = SKLabelNode()
     
-    var score = 0
+    static var score = 0
     
     var timer = Timer()
     
@@ -99,9 +99,9 @@ class GameScene: SKScene{
     func addScore(){
         scoreLabel = childNode(withName: "scoreLabel") as! SKLabelNode
         
-        score += 1
+        GameScene.score += 1
         
-        scoreLabel.text = "Score: \(score)"
+        scoreLabel.text = "Score: \(GameScene.score)"
     }
     
 }
